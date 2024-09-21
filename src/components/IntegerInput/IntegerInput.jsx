@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const IntegerInput = ({ onDateSelect }) => {
   const [inputType, setInputType] = useState("text");
@@ -6,14 +7,14 @@ const IntegerInput = ({ onDateSelect }) => {
   const [selectedDate, setSelectedDate] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [data, setData] = useState([]);
+  const [dateFilters, setDateFilters] = useState([]);
 
-  // Fetch data from API
   useEffect(() => {
-    fetch("https://demo-backend.durbin.co.in/get-all-dashboard-data")
-      .then((response) => response.json())
-      .then((result) => {
-        console.log("API Data:", result.data);
-        setData(result.data);
+    axios
+      .get("https://demo-backend.durbin.co.in/get-all-dashboard-data")
+      .then((response) => {
+        console.log("API Data:", response.data.data);
+        setData(response.data.data); // Set the data
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
@@ -49,12 +50,28 @@ const IntegerInput = ({ onDateSelect }) => {
     const filtered = data.filter((item) => item.lastChecked === formattedDate);
     setFilteredData(filtered);
 
+    // Add selected date to the date filters list if it's not already there
+    if (!dateFilters.includes(formattedDate)) {
+      setDateFilters((prevDates) => [...prevDates, formattedDate]);
+    }
+
     // Optionally pass the formatted date back to the parent
     onDateSelect && onDateSelect(formattedDate);
   };
 
+  // Handle removing a date filter
+  const handleRemoveDateFilter = (date) => {
+    setDateFilters((prevDates) => prevDates.filter((d) => d !== date));
+    // Clear filtered data if the removed filter is the currently selected one
+    if (selectedDate === date) {
+      setFilteredData([]);
+      setSelectedDate("");
+    }
+  };
+
   return (
     <div className="p-4">
+      {/* Search input */}
       <input
         type={inputType}
         className="w-full p-2 border rounded-md mb-4"
@@ -69,6 +86,30 @@ const IntegerInput = ({ onDateSelect }) => {
         </div>
       )}
 
+      {/* Display selected date filters with remove option */}
+      {dateFilters.length > 0 && (
+        <div className="mt-4 mb-4">
+          <h3 className="font-semibold">Selected Date Filters:</h3>
+          <ul className="bg-gray-100 p-2 rounded-md">
+            {dateFilters.map((date, index) => (
+              <li
+                key={index}
+                className="flex justify-between items-center py-1"
+              >
+                <span>{date}</span>
+                <button
+                  className="text-red-500 hover:text-red-700"
+                  onClick={() => handleRemoveDateFilter(date)}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Display filtered data based on the selected date */}
       {filteredData.length > 0 ? (
         <div className="mt-4">
           <h3 className="text-lg font-semibold">Filtered Data</h3>

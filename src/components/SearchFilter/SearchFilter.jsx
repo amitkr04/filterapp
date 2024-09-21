@@ -1,31 +1,3 @@
-// import React, { useState } from "react";
-// import IntegerInput from "../IntegerInput/IntegerInput";
-// import StringInput from "../StringInput/StringInput";
-// import FilteredItemsDisplay from "../FilteredItemsDisplay/FilteredItemsDisplay";
-
-// const SearchFilter = () => {
-//   const [selectedDate, setSelectedDate] = useState("");
-//   const [selectedItems, setSelectedItems] = useState([]);
-
-//   const handleDateSelect = (date) => {
-//     setSelectedDate(date);
-//   };
-
-//   const handleItemSelect = (item) => {
-//     setSelectedItems((prev) => [...prev, item]);
-//   };
-
-//   return (
-//     <div className="max-w-xl mx-auto">
-//       <IntegerInput onDateSelect={handleDateSelect} />
-//       <StringInput onItemSelect={handleItemSelect} />
-//       <FilteredItemsDisplay selectedItems={selectedItems} />
-//     </div>
-//   );
-// };
-
-// export default SearchFilter;
-
 import React, { useState } from "react";
 import IntegerInput from "../IntegerInput/IntegerInput";
 import StringInput from "../StringInput/StringInput";

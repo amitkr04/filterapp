@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const StringInput = ({ onItemSelect }) => {
   const [searchValue, setSearchValue] = useState("");
   const [filteredItems, setFilteredItems] = useState([]);
   const [data, setData] = useState([]);
-  const [searchOptions, setSearchOptions] = useState([]); // Stores selected search filter options
+  const [searchOptions, setSearchOptions] = useState([]);
 
-  // Fetch data from the API
   useEffect(() => {
-    fetch("https://demo-backend.durbin.co.in/get-all-dashboard-data")
-      .then((response) => response.json())
-      .then((result) => setData(result.data))
-      .catch((error) => console.error("Error fetching data:", error));
+    axios
+      .get("https://demo-backend.durbin.co.in/get-all-dashboard-data")
+      .then((response) => {
+        setData(response.data.data); // Adjusted to access the data correctly
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
   // Handle input change and filter items based on company name
@@ -26,7 +30,6 @@ const StringInput = ({ onItemSelect }) => {
         !searchOptions.some((option) => option.companyName === item.companyName)
     );
     setFilteredItems(filtered);
-    console.log(filtered);
   };
 
   // Handle item click and selection
@@ -41,6 +44,13 @@ const StringInput = ({ onItemSelect }) => {
     ) {
       setSearchOptions((prevOptions) => [...prevOptions, item]);
     }
+  };
+
+  // Handle remove company from searchOptions
+  const handleRemoveItem = (companyName) => {
+    setSearchOptions((prevOptions) =>
+      prevOptions.filter((option) => option.companyName !== companyName)
+    );
   };
 
   return (
@@ -60,8 +70,17 @@ const StringInput = ({ onItemSelect }) => {
           <h3 className="font-semibold">Selected Filters:</h3>
           <ul className="bg-gray-100 p-2 rounded-md">
             {searchOptions.map((item, index) => (
-              <li key={index} className="py-1">
-                {item.companyName}
+              <li
+                key={index}
+                className="flex justify-between items-center py-1"
+              >
+                <span>{item.companyName}</span>
+                <button
+                  className="text-red-500 hover:text-red-700"
+                  onClick={() => handleRemoveItem(item.companyName)}
+                >
+                  Remove
+                </button>
               </li>
             ))}
           </ul>
