@@ -11,7 +11,7 @@ const StringInput = ({ onItemSelect }) => {
     axios
       .get("https://demo-backend.durbin.co.in/get-all-dashboard-data")
       .then((response) => {
-        setData(response.data.data); // Adjusted to access the data correctly
+        setData(response.data.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -34,11 +34,9 @@ const StringInput = ({ onItemSelect }) => {
 
   // Handle item click and selection
   const handleItemClick = (item) => {
-    onItemSelect(item); // Send the selected item to the parent component
-    setSearchValue(""); // Clear the search input
-    setFilteredItems([]); // Clear filtered items after selection
-
-    // Add the clicked item to the search options if it's not already there
+    onItemSelect(item);
+    setSearchValue("");
+    setFilteredItems([]);
     if (
       !searchOptions.some((option) => option.companyName === item.companyName)
     ) {
@@ -46,16 +44,11 @@ const StringInput = ({ onItemSelect }) => {
     }
   };
 
-  // Handle remove company from searchOptions
-  const handleRemoveItem = (companyName) => {
-    setSearchOptions((prevOptions) =>
-      prevOptions.filter((option) => option.companyName !== companyName)
-    );
-  };
-
   return (
     <div className="p-4">
-      {/* Search input */}
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        Search by Company Name
+      </label>
       <input
         type="text"
         className="w-full p-2 border rounded-md mb-4"
@@ -63,31 +56,6 @@ const StringInput = ({ onItemSelect }) => {
         value={searchValue}
         onChange={handleInputChange}
       />
-
-      {/* Display selected search options */}
-      {searchOptions.length > 0 && (
-        <div className="mt-4 mb-4">
-          <h3 className="font-semibold">Selected Filters:</h3>
-          <ul className="bg-gray-100 p-2 rounded-md">
-            {searchOptions.map((item, index) => (
-              <li
-                key={index}
-                className="flex justify-between items-center py-1"
-              >
-                <span>{item.companyName}</span>
-                <button
-                  className="text-red-500 hover:text-red-700"
-                  onClick={() => handleRemoveItem(item.companyName)}
-                >
-                  Remove
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Display filtered search results */}
       {filteredItems.length > 0 && (
         <ul className="bg-white border rounded-md">
           {filteredItems.map((item) => (

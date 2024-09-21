@@ -1,5 +1,4 @@
 import React from "react";
-
 const FilteredItemsDisplay = ({ selectedItems }) => {
   return (
     <div className="p-4">
@@ -10,7 +9,7 @@ const FilteredItemsDisplay = ({ selectedItems }) => {
             Total Companies: {selectedItems.length}
           </h2>
           <table className="min-w-full bg-white border border-gray-200 shadow-md rounded-md">
-            <thead className="bg-gray-50 border-b">
+            <thead className="bg-gradient-to-r from-blue-200 to-purple-300 text-white">
               <tr>
                 <th className="py-3 px-4 text-left font-semibold text-gray-600">
                   Company Name
@@ -41,16 +40,18 @@ const FilteredItemsDisplay = ({ selectedItems }) => {
                   <td className="py-3 px-4">{item.performance}%</td>
                   <td className="py-3 px-4">{item.description}</td>
                   <td className="py-3 px-4">{item.lastChecked}</td>
-                  <td
-                    className={`py-3 px-4 font-semibold ${
-                      item.status === "Paid"
-                        ? "text-green-500"
-                        : item.status === "Pending"
-                        ? "text-yellow-500"
-                        : "text-red-500"
-                    }`}
-                  >
-                    {item.status}
+                  <td className="py-3 px-4">
+                    <span
+                      className={`py-1 px-3 rounded-md text-white font-semibold focus:outline-none ${
+                        item.status === "Paid"
+                          ? "bg-green-400 hover:bg-green-500"
+                          : item.status === "Pending"
+                          ? "bg-yellow-400 hover:bg-yellow-500"
+                          : "bg-red-400 hover:bg-red-500"
+                      }`}
+                    >
+                      {item.status}
+                    </span>
                   </td>
                 </tr>
               ))}

@@ -4,40 +4,39 @@ import StringInput from "../StringInput/StringInput";
 import FilteredItemsDisplay from "../FilteredItemsDisplay/FilteredItemsDisplay";
 
 const SearchFilter = () => {
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedItems, setSelectedItems] = useState([]);
+  const [filteredResults, setFilteredResults] = useState([]);
 
-  const handleDateSelect = (date) => {
-    setSelectedDate(date);
+  // Handle date selection
+  const handleDateSelect = (date, filteredData) => {
+    setFilteredResults((prevResults) => [
+      ...prevResults.filter((item) => item.lastChecked !== date),
+      ...filteredData,
+    ]);
   };
 
+  // Handle company name selection
   const handleItemSelect = (item) => {
-    setSelectedItems((prevItems) => {
-      // Prevent adding duplicate items
+    setFilteredResults((prevResults) => {
       if (
-        !prevItems.some(
+        !prevResults.some(
           (selectedItem) => selectedItem.companyName === item.companyName
         )
       ) {
-        return [...prevItems, item];
+        return [...prevResults, item];
       }
-      return prevItems;
+      return prevResults;
     });
   };
-
+  // max-w-xl mx-auto, w-1/3 p-4, w-2/3 p-4
   return (
     <div className="max-w-xl mx-auto">
-      <IntegerInput onDateSelect={handleDateSelect} />
-      <StringInput onItemSelect={handleItemSelect} />
-
-      {/* Display the selected date */}
-      {selectedDate && (
-        <div className="mt-4 p-2 bg-blue-100 rounded-md">
-          Selected Date: {selectedDate}
-        </div>
-      )}
-
-      <FilteredItemsDisplay selectedItems={selectedItems} />
+      <div className="">
+        <IntegerInput onDateSelect={handleDateSelect} />
+        <StringInput onItemSelect={handleItemSelect} />
+      </div>
+      <div className="">
+        <FilteredItemsDisplay selectedItems={filteredResults} />
+      </div>
     </div>
   );
 };
