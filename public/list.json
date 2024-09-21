@@ -1,0 +1,328 @@
+{
+  "data": [
+    {
+      "companyName": "Planet X",
+      "description": "Rocket Management App",
+      "details": "Manages your rocket easily",
+      "lastChecked": "June 11, 2026",
+      "performance": 30,
+      "status": "Paid",
+      "website": "planetx.tech"
+    },
+    {
+      "companyName": "Nova Systems",
+      "description": "AI Exploration App",
+      "details": "Explores the unknown with AI",
+      "lastChecked": "July 2, 2026",
+      "performance": 45,
+      "status": "Pending",
+      "website": "nova.tech"
+    },
+    {
+      "companyName": "Stellar Corp",
+      "description": "Data Processing App",
+      "details": "Processes data efficiently",
+      "lastChecked": "July 15, 2026",
+      "performance": 78,
+      "status": "Failed",
+      "website": "stellar.tech"
+    },
+    {
+      "companyName": "Galactic Ltd",
+      "description": "Astro Navigation App",
+      "details": "Navigates the stars",
+      "lastChecked": "June 25, 2026",
+      "performance": 62,
+      "status": "Paid",
+      "website": "galactic.tech"
+    },
+    {
+      "companyName": "Cosmo Ventures",
+      "description": "Space Tourism App",
+      "details": "Books your space travel",
+      "lastChecked": "July 1, 2026",
+      "performance": 85,
+      "status": "Pending",
+      "website": "cosmo.tech"
+    },
+    {
+      "companyName": "Orion Enterprises",
+      "description": "Asteroid Mining App",
+      "details": "Mines asteroids for resources",
+      "lastChecked": "July 10, 2026",
+      "performance": 55,
+      "status": "Failed",
+      "website": "orion.tech"
+    },
+    {
+      "companyName": "Astro Innovations",
+      "description": "Satellite Management App",
+      "details": "Manages satellite operations",
+      "lastChecked": "June 20, 2026",
+      "performance": 70,
+      "status": "Paid",
+      "website": "astro.tech"
+    },
+    {
+      "companyName": "Lunar Tech",
+      "description": "Moon Base App",
+      "details": "Manages your moon base",
+      "lastChecked": "July 5, 2026",
+      "performance": 90,
+      "status": "Pending",
+      "website": "lunar.tech"
+    },
+    {
+      "companyName": "Martian Solutions",
+      "description": "Mars Colony App",
+      "details": "Sets up colonies on Mars",
+      "lastChecked": "July 12, 2026",
+      "performance": 40,
+      "status": "Failed",
+      "website": "martian.tech"
+    },
+    {
+      "companyName": "Solaris Inc",
+      "description": "Solar Power App",
+      "details": "Harnesses solar energy",
+      "lastChecked": "June 30, 2026",
+      "performance": 80,
+      "status": "Paid",
+      "website": "solaris.tech"
+    },
+    {
+      "companyName": "Cosmic AI",
+      "description": "AI Space Exploration App",
+      "details": "Explores space with AI",
+      "lastChecked": "June 28, 2026",
+      "performance": 25,
+      "status": "Pending",
+      "website": "cosmic.tech"
+    },
+    {
+      "companyName": "Nebula Networks",
+      "description": "Interstellar Communication App",
+      "details": "Communicates across stars",
+      "lastChecked": "July 7, 2026",
+      "performance": 35,
+      "status": "Failed",
+      "website": "nebula.tech"
+    },
+    {
+      "companyName": "Astro Fleet",
+      "description": "Fleet Management App",
+      "details": "Manages space fleets",
+      "lastChecked": "June 15, 2026",
+      "performance": 60,
+      "status": "Paid",
+      "website": "astrofleet.tech"
+    },
+    {
+      "companyName": "Galactic Travels",
+      "description": "Space Travel Booking App",
+      "details": "Books your space trips",
+      "lastChecked": "July 8, 2026",
+      "performance": 50,
+      "status": "Pending",
+      "website": "galactictravels.tech"
+    },
+    {
+      "companyName": "Starbase Systems",
+      "description": "Starbase Management App",
+      "details": "Manages starbases",
+      "lastChecked": "June 22, 2026",
+      "performance": 73,
+      "status": "Failed",
+      "website": "starbase.tech"
+    },
+    {
+      "companyName": "Orbit Solutions",
+      "description": "Orbital Mechanics App",
+      "details": "Calculates orbital paths",
+      "lastChecked": "July 3, 2026",
+      "performance": 88,
+      "status": "Paid",
+      "website": "orbit.tech"
+    },
+    {
+      "companyName": "Comet Tech",
+      "description": "Comet Tracking App",
+      "details": "Tracks comet trajectories",
+      "lastChecked": "July 11, 2026",
+      "performance": 65,
+      "status": "Pending",
+      "website": "comet.tech"
+    },
+    {
+      "companyName": "Exoplanet Explorers",
+      "description": "Exoplanet Discovery App",
+      "details": "Discovers new planets",
+      "lastChecked": "June 29, 2026",
+      "performance": 38,
+      "status": "Failed",
+      "website": "exoplanet.tech"
+    },
+    {
+      "companyName": "Meteoric Inc",
+      "description": "Meteor Detection App",
+      "details": "Detects meteors",
+      "lastChecked": "July 14, 2026",
+      "performance": 58,
+      "status": "Paid",
+      "website": "meteoric.tech"
+    },
+    {
+      "companyName": "Intergalactic LLC",
+      "description": "Galactic Commerce App",
+      "details": "Manages intergalactic trade",
+      "lastChecked": "June 18, 2026",
+      "performance": 47,
+      "status": "Pending",
+      "website": "intergalactic.tech"
+    },
+    {
+      "companyName": "Celestial Solutions",
+      "description": "Celestial Body Mapping App",
+      "details": "Maps celestial bodies",
+      "lastChecked": "July 6, 2026",
+      "performance": 92,
+      "status": "Failed",
+      "website": "celestial.tech"
+    },
+    {
+      "companyName": "Astro Dynamics",
+      "description": "Dynamic Simulation App",
+      "details": "Simulates space dynamics",
+      "lastChecked": "July 9, 2026",
+      "performance": 64,
+      "status": "Paid",
+      "website": "astrodynamics.tech"
+    },
+    {
+      "companyName": "Galaxy Ventures",
+      "description": "Galaxy Mapping App",
+      "details": "Maps galaxies",
+      "lastChecked": "June 21, 2026",
+      "performance": 75,
+      "status": "Pending",
+      "website": "galaxy.tech"
+    },
+    {
+      "companyName": "Starship Enterprises",
+      "description": "Starship Management App",
+      "details": "Manages starships",
+      "lastChecked": "June 27, 2026",
+      "performance": 82,
+      "status": "Failed",
+      "website": "starship.tech"
+    },
+    {
+      "companyName": "Alien Innovations",
+      "description": "Alien Contact App",
+      "details": "Facilitates alien contact",
+      "lastChecked": "July 4, 2026",
+      "performance": 31,
+      "status": "Paid",
+      "website": "alien.tech"
+    },
+    {
+      "companyName": "SpaceXplore",
+      "description": "Space Exploration App",
+      "details": "Explores deep space",
+      "lastChecked": "July 13, 2026",
+      "performance": 48,
+      "status": "Pending",
+      "website": "spacexplore.tech"
+    },
+    {
+      "companyName": "Asteroid Analytics",
+      "description": "Asteroid Analysis App",
+      "details": "Analyzes asteroids",
+      "lastChecked": "June 19, 2026",
+      "performance": 53,
+      "status": "Failed",
+      "website": "asteroid.tech"
+    },
+    {
+      "companyName": "Starlight Systems",
+      "description": "Starlight Mapping App",
+      "details": "Maps starlight paths",
+      "lastChecked": "June 24, 2026",
+      "performance": 77,
+      "status": "Paid",
+      "website": "starlight.tech"
+    },
+    {
+      "companyName": "Horizon Technologies",
+      "description": "Horizon Scanning App",
+      "details": "Scans horizons",
+      "lastChecked": "July 5, 2026",
+      "performance": 66,
+      "status": "Pending",
+      "website": "horizon.tech"
+    },
+    {
+      "companyName": "Nebula Innovations",
+      "description": "Nebula Observation App",
+      "details": "Observes nebulas",
+      "lastChecked": "June 26, 2026",
+      "performance": 83,
+      "status": "Failed",
+      "website": "nebulainnovations.tech"
+    },
+    {
+      "companyName": "Quasar Tech",
+      "description": "Quasar Detection App",
+      "details": "Detects quasars",
+      "lastChecked": "July 7, 2026",
+      "performance": 71,
+      "status": "Paid",
+      "website": "quasar.tech"
+    },
+    {
+      "companyName": "Pulsar Systems",
+      "description": "Pulsar Monitoring App",
+      "details": "Monitors pulsars",
+      "lastChecked": "June 23, 2026",
+      "performance": 52,
+      "status": "Pending",
+      "website": "pulsar.tech"
+    },
+    {
+      "companyName": "Black Hole Corp",
+      "description": "Black Hole Analysis App",
+      "details": "Analyzes black holes",
+      "lastChecked": "July 8, 2026",
+      "performance": 34,
+      "status": "Failed",
+      "website": "blackhole.tech"
+    },
+    {
+      "companyName": "Graviton Labs",
+      "description": "Gravitational Wave App",
+      "details": "Detects gravitational waves",
+      "lastChecked": "June 17, 2026",
+      "performance": 69,
+      "status": "Paid",
+      "website": "graviton.tech"
+    },
+    {
+      "companyName": "Singularity Solutions",
+      "description": "Singularity Analysis App",
+      "details": "Analyzes singularities",
+      "lastChecked": "July 2, 2026",
+      "performance": 87,
+      "status": "Pending",
+      "website": "singularity.tech"
+    },
+    {
+      "companyName": "Hyperdrive Innovations",
+      "description": "Hyperdrive Tech App",
+      "details": "Develops hyperdrive tech",
+      "lastChecked": "July 10, 2026",
+      "performance": 42,
+      "status": "Failed",
+      "website": "hyperdrive.tech"
+    }
+  ]
+}
